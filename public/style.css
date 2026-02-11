@@ -1,11 +1,75 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset some default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body */
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #F5DDE0;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Header Title */
+  h1 {
     text-align: center;
-}
-nav {
-    margin-top: 20px;
-}
-a {
+    margin-bottom: 20px;
+    color: #B66681;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  nav a {
     text-decoration: none;
-    margin: 0 10px;
-}
+    margin: 0 12px;
+    color: #3498db;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  nav a:hover {
+    color: #1d6fa5;
+    text-decoration: underline;
+  }
+  
+  /* Blog Container */
+  #posts {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  /* Blog Post Card */
+  .post-item {
+    background: #DFC1CB;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.2s;
+  }
+  
+  /* Hover effect */
+  .post-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Post Title */
+  .post-item h2 {
+    color: #34495e;
+    margin-bottom: 8px;
+  }
+  
+  /* Author text */
+  .post-item small {
+    color: #777;
+  }
+  

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1>Blog Page</h1>
+    <div id="posts"></div>
+
+    <script>
+        // Fetch data from server API
+        fetch("/api/posts")
+          .then(res => {
+            if (!res.ok) throw new Error("Network response was not ok");
+            return res.json();
+          })
+          .then(posts => {
+            const container = document.getElementById("posts");
+      
+            posts.forEach(post => {
+              const div = document.createElement("div");
+              div.className = "post-item";
+      
+              div.innerHTML = `
+                <h2>${post.title}</h2>
+                <p>${post.content}</p>
+                <small>Author: ${post.author}</small>
+                <hr>
+              `;
+      
+              container.appendChild(div); // IMPORTANT
+            });
+          })
+          .catch(err => console.error("Error loading posts:", err));
+      </script>
+    
+</body>
+</html>
