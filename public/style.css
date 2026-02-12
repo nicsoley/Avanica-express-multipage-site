@@ -1,4 +1,3 @@
-/* Reset some default browser styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -72,4 +71,24 @@
   .post-item small {
     color: #777;
   }
+
+  /* Back to Home Button */
+.back-home-btn {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 10px 18px;
+  background: #B66681;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.back-home-btn:hover {
+  background: #9e4f6b;
+  transform: translateY(-2px);
+}
+
   
